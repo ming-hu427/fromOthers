@@ -16,4 +16,5 @@ limitations under the License.
 #include "tensorflow/lite/micro/examples/hello_world/constants.h"
 
 // This is tuned so that a full cycle takes ~4 seconds on an Arduino MKRZERO.
+// 總推斷次數, 可調整 LED 閃爍速度
 const int kInferencesPerCycle = 1000;
