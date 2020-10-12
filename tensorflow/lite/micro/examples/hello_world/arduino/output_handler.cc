@@ -36,10 +36,12 @@ void HandleOutput(tflite::ErrorReporter* error_reporter, float x_value,
 
   // Calculate the brightness of the LED such that y=-1 is fully off
   // and y=1 is fully on. The LED's brightness can range from 0-255.
+  // 計算 LED 亮度  
   int brightness = (int)(127.5f * (y_value + 1));
 
   // Set the brightness of the LED. If the specified pin does not support PWM,
   // this will result in the LED being on when y > 127, off otherwise.
+  // 設定 LED 亮度   
   analogWrite(led, brightness);
 
   // Log the current brightness value for display in the Arduino plotter
