@@ -12,12 +12,14 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ==============================================================================*/
-
+// 執行的主程式
 #include "tensorflow/lite/micro/examples/hello_world/main_functions.h"
 
 #include "tensorflow/lite/micro/all_ops_resolver.h"
 #include "tensorflow/lite/micro/examples/hello_world/constants.h"
+// 訓練完成且轉為C檔案的模型
 #include "tensorflow/lite/micro/examples/hello_world/model.h"
+// 輸出結果
 #include "tensorflow/lite/micro/examples/hello_world/output_handler.h"
 #include "tensorflow/lite/micro/micro_error_reporter.h"
 #include "tensorflow/lite/micro/micro_interpreter.h"
@@ -92,6 +94,8 @@ void loop() {
   // inference_count to the number of inferences per cycle to determine
   // our position within the range of possible x values the model was
   // trained on, and use this to calculate a value.
+  // inference_count 執行次數, kInferencesPerCycle 總推斷次數, 設定值在 constants.cc 
+  // position 目前資料的位置   
   float position = static_cast<float>(inference_count) /
                    static_cast<float>(kInferencesPerCycle);
   float x_val = position * kXrange;
