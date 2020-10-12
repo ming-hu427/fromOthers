@@ -94,7 +94,7 @@ void loop() {
   // inference_count to the number of inferences per cycle to determine
   // our position within the range of possible x values the model was
   // trained on, and use this to calculate a value.
-  // inference_count 執行次數, kInferencesPerCycle 總推斷次數, 設定值在 constants.cc 
+  // inference_count 執行次數, kInferencesPerCycle 總推斷次數, 設定值在 constants.cc, constants.h 
   // position 目前資料的位置   
   float position = static_cast<float>(inference_count) /
                    static_cast<float>(kInferencesPerCycle);
