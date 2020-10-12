@@ -16,4 +16,6 @@ limitations under the License.
 #include "tensorflow/lite/micro/examples/hello_world/constants.h"
 
 // This is a small number so that it's easy to read the logs
+// kInferencesPerCycle 總推斷次數, 可調整 LED 閃爍速度
+設定值在 constants.cc 
 const int kInferencesPerCycle = 20;
